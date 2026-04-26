@@ -1,39 +1,42 @@
 # vokabel-app
-Vokabel-App Grundfunktionen: Liste erstellen, Vokabeln hinzufügen und anzeigen
 
 Das ist mein nächstes Python-Projekt.
 
-Ziel ist es, eine einfache Vokabel-App zu bauen, mit der ich eigene Vokabeln eingeben, speichern, anzeigen und später im Quiz abfragen kann.
+Ziel ist es, eine einfache Vokabel-App zu bauen, mit der ich eigene Vokabeln eingeben, speichern, anzeigen und im Quiz abfragen kann.
 
-Das Projekt soll Schritt für Schritt aufgebaut werden.
+Das Projekt wurde bewusst einfach gehalten, damit zuerst die Logik funktioniert.
 
-Geplanter Aufbau:
+## Funktionen
 
-1. Listen erstellen
+### 1. Listen erstellen
 - Name der Liste eingeben
 - pro Liste maximal 10 Vokabeln
-- jede Vokabel soll Thai, Deutsch und optional einen Kommentar haben
-- die Daten sollen gespeichert und wieder geladen werden
+- jede Vokabel besteht aus Thai-Schrift, Lautschrift, Deutsch und optional einem Kommentar
+- die Daten werden in einer JSON-Datei gespeichert und beim Start wieder geladen
 
-2. Listen anzeigen
+### 2. Listen anzeigen
 - vorhandene Listen anzeigen
+- eine Liste auswählen
 - enthaltene Vokabeln anzeigen
 
-3. Quiz
-- Vokabeln aus einer Liste abfragen
-- Antworten sollen gemischt werden
+### 3. Quiz
+- Liste auswählen
+- zufällige Vokabeln abfragen
+- Thai-Schrift und Lautschrift werden angezeigt
+- deutsche Bedeutung eingeben
+- Ergebnis wird am Ende angezeigt
 
-4. Spätere Erweiterung
+## Spätere Erweiterungen
 - Listen oder einzelne Vokabeln bearbeiten oder löschen
 - kleinere Verbesserungen an der Struktur
-
-5. Langfristiges Ziel
 - später eine einfache Handy-App mit Flutter bauen
-- die App muss nicht schön sein, sondern vor allem funktionieren
-- geplant sind dafür mehrere Ansichten, zum Beispiel:
-  - Hauptseite
-  - Vokabel hinzufügen
-  - Vokabeln anzeigen
-  - Quiz
 
-Das Projekt soll bewusst einfach bleiben und zuerst über die Logik funktionieren.
+## Langfristiges Ziel
+
+Langfristig soll daraus eine einfache Handy-App entstehen. Die App muss nicht schön sein, sondern vor allem funktionieren.
+
+Geplant sind dafür:
+- Hauptseite
+- Vokabel hinzufügen
+- Vokabeln anzeigen
+- Quiz
