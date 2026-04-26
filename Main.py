@@ -1,4 +1,19 @@
+import json
+
 vokabellisten = {}
+    
+
+def speichern():
+    with open("vokabeln.json", "w", encoding="utf-8") as datei:
+        json.dump(vokabellisten, datei, indent=4, ensure_ascii=False)
+
+def laden():
+    global vokabellisten
+    try:
+        with open("vokabeln.json", "r", encoding="utf-8") as datei:
+            vokabellisten = json.load(datei)
+    except:
+        vokabellisten = {}
 
 def liste_erstellen():
     name = input("Name der Liste:").strip()
@@ -44,6 +59,8 @@ def liste_erstellen():
 
         print("Vokabel hinzugefügt.")
 
+        speichern()
+
 def listen_anzeigen():
     if not vokabellisten:
         print("Keine liste vorhanden")
@@ -84,12 +101,16 @@ def listen_anzeigen():
         if vokabel["kommentar"] != "":
             print(f"Kommentar: {vokabel['kommentar']}")
 
+
+
 def menue_anzeigen():
     print("\nVokabel-App")
     print("1) Liste erstellen")
     print("2) Liste Anzeigen")
     print("3) Quiz starten")
     print("4) Beenden")
+
+laden()
 
 while True:
     menue_anzeigen()
